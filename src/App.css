@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box; /* Inclui padding e border no cálculo de largura/altura */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamento padrão */
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Fonte padrão */
+  background: linear-gradient(to right, #74ebd5, #ACB6E5); /* Gradiente de fundo suave */
+  color: #333; /* Cor do texto */
+}
+
+.App {
+  max-width: 600px; /* Largura máxima do conteúdo */
+  margin: 50px auto; /* Centraliza o conteúdo */
+  padding: 20px; /* Espaçamento interno */
+  background: white; /* Fundo branco */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+h1 {
+  text-align: center; /* Centraliza o título */
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+  font-size: 32px; /* Tamanho do título */
+}
+
+.task-input {
+  display: flex; /* Alinha o input e o botão em linha */
+  justify-content: space-between; /* Espaça os elementos */
+  margin-bottom: 20px; /* Espaçamento abaixo do campo de entrada */
+}
+
+input[type="text"] {
+  flex: 1; /* Faz o input ocupar o espaço disponível */
+  padding: 10px; /* Espaçamento interno do input */
+  font-size: 18px; /* Tamanho da fonte do input */
+  border: 2px solid #74ebd5; /* Borda do input */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin-right: 10px; /* Espaçamento à direita do input */
+  transition: border-color 0.3s; /* Transição suave da cor da borda */
+}
+
+input[type="text"]:focus {
+  border-color: #ACB6E5; /* Cor da borda ao focar */
+  outline: none; /* Remove contorno padrão */
+}
+
+button {
+  padding: 10px 15px; /* Espaçamento interno dos botões */
+  font-size: 16px; /* Tamanho da fonte dos botões */
+  cursor: pointer; /* Mãozinha ao passar o mouse */
+  border: none; /* Remove bordas padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+button:hover {
+  background-color: #74ebd5; /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+}
+
+.task-list {
+  list-style-type: none; /* Remove marcadores da lista */
+  padding: 0; /* Remove espaçamento padrão */
+}
+
+.task-list li {
+  display: flex; /* Alinha os itens da lista em linha */
+  justify-content: space-between; /* Espaça os elementos */
+  align-items: center; /* Alinha verticalmente ao centro */
+  padding: 10px; /* Espaçamento interno */
+  border-bottom: 1px solid #ddd; /* Linha de separação entre as tarefas */
+  font-size: 18px; /* Tamanho da fonte das tarefas */
+  transition: background-color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.task-list li:hover {
+  background-color: rgba(116, 235, 213, 0.3); /* Cor de fundo ao passar o mouse sobre a tarefa */
+}
+
+.task-list li.completed span {
+  text-decoration: line-through; /* Risca o texto da tarefa concluída */
+  color: gray; /* Cor do texto concluído */
+}
+
+button {
+  background-color: #ACB6E5; /* Cor de fundo dos botões */
+  color: white; /* Cor do texto dos botões */
+}
+
+button:last-child {
+  background-color: red; /* Cor do botão "Remover" */
+}
